@@ -1,5 +1,27 @@
 public class Rectangle {
-    double breadth, length;
+
+    private int length;
+    private int breadth;
+    public int getLength(){
+        return length;
+    }
+    public int getBreadth(){
+        return breadth;
+    }
+    public void setLength(int l){
+        if(l>0)
+            length = l;
+        else
+            length =0;
+
+    }
+    public void setBreadth(int b){
+        if(b>0)
+            breadth = b;
+        else
+            breadth = 0;
+    }
+
     public double area(){
         double area = breadth * length;
         return area;
@@ -20,17 +42,16 @@ public class Rectangle {
 class start{
     public static void main(String[] args){
         Rectangle rec = new Rectangle();
-        Rectangle rec2 = new Rectangle();
-        rec.length = 10;
-        rec.breadth = 5;
-        rec2.length = 20;
-        rec2.breadth = 10;
-        System.out.println(" area is"+rec.area());
-        System.out.println(" perimeter is"+rec.perimeter());
-        System.out.println("Is it a square --"+rec.isSquare());
-        System.out.println(rec2.area());
-        System.out.println(rec2.perimeter());
-        System.out.println(rec2.isSquare());
+        rec.setLength(10);
+        rec.setBreadth(5);
+        System.out.println(rec.getLength());
+        System.out.println(rec.getBreadth());
+        System.out.println(rec.area());
+        System.out.println(rec.perimeter());
+        System.out.println(rec.isSquare());
+
+
+
     }
 
 }
